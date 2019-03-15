@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>frankButton</title>
+    <link rel="stylesheet" href="./btn.css">
+</head>
+<body>
+    <button id="btn" class="frankButton">按钮
+        <span class="circle"></span>
+    </button>
+    <script>
+        btn.onclick = function(){
+            btn.querySelector('.circle')
+                .classList.add('active')
+        }
+        btn.querySelector('.circle').addEventListener('transitionend',
+            function(){
+                btn.querySelector('.circle')
+                .classList.remove('active')
+        })
+    </script>
+</body>
+</html>
